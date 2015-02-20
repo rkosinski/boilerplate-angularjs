@@ -1,2 +1,2 @@
-## angular.js bootstrap
-# based on scotch.io tutorial
+# angular.js bootstrap
+## based on scotch.io tutorial
