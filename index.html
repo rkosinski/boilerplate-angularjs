@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<html ng-app="app">
 <html>
 <head>
 
@@ -31,16 +31,36 @@
 
 <body>
 
-<script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-XXXXXXXX-X']);
-    _gaq.push(['_trackPageview']);
+    <div ng-view></div>
 
-    (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-</script>
+    <!-- Vendors
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <script src="vendors/angular.min.js" type="application/javascript"></script>
+    <script src="vendors/angular-route.min.js" type="application/javascript"></script>
+    <script src="vendors/angular-resource.min.js" type="application/javascript"></script>
+
+    <!-- App files
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+    <script src="app/app.module.js" type="application/javascript"></script>
+    <script src="app/app.routes.js" type="application/javascript"></script>
+    <script src="app/components/about/aboutService.js" type="application/javascript"></script>
+    <script src="app/components/home/homeController.js" type="application/javascript"></script>
+    <script src="app/components/about/aboutController.js" type="application/javascript"></script>
+    <script src="app/components/contact/contactController.js" type="application/javascript"></script>
+
+    <!-- Google Analytics
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-XXXXXXXX-X']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
 </body>
 </html>
